@@ -141,6 +141,7 @@ void CRObjects::Render() {
                                 if (IsObjOnScreen(object)) {
                                     D3DXVECTOR3 objPos = GetObjectCoordinates(object);
                                     D3DXVECTOR2 objScreenPos = CalcScreenCoords(objPos);
+                                    drawlist->AddText(ImVec2(objScreenPos.x, objScreenPos.y), 0xFFFFFFFF, objectName[i]);
                                     if (lineRenderStatus)
                                         drawlist->AddLine(ImVec2(pedScreenPos.x, pedScreenPos.y), ImVec2(objScreenPos.x, objScreenPos.y), 0xFFFFFFFF);
                                     std::string r_text = objectName[i];
@@ -152,8 +153,8 @@ void CRObjects::Render() {
                         }
                     }
                 }
-            }
-        }
+                                }
+                            }
         if (textRenderStatus) {
             for (int i = 0; i < 2048; i++) {
                 if (samp::RefNetGame() != nullptr) {
