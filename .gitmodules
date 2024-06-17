@@ -1,0 +1,9 @@
+[submodule "SAMP-API"]
+	path = SAMP-API
+	url = https://github.com/BlastHackNet/SAMP-API.git
+[submodule "llmo"]
+	path = llmo
+	url = https://gitlab.com/SR_team/llmo.git
+[submodule "minhook"]
+	path = minhook
+	url = https://github.com/TsudaKageyu/minhook.git
